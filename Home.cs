@@ -37,7 +37,7 @@ namespace ProvaN3_SolicitaSuporte
             Email newEmail = new Email();
 
             this.WindowState = FormWindowState.Minimized;
-            Screenshot.TakeScreenshot(filePath);
+            Screenshot.TakeScreenshot(filePath, directory);
             this.WindowState = FormWindowState.Normal;
 
             newEmail.SendImageToSuport(txtBox_To.Text, txtBox_Subject.Text, txtBox_BodyEmail.Text, filePath);

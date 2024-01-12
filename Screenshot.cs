@@ -15,7 +15,12 @@ namespace ProvaN3_SolicitaSuporte
         public static void TakeScreenshot(string filePath)
         {
             try
-            {                
+            {
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
 
                 Bitmap captureBitmap = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
 
